@@ -1,0 +1,32 @@
+package com;
+
+import java.util.Arrays;
+
+public class InsertionSort {
+	
+	public static void main(String[] args) {
+		
+		int[] nums= {5,2,4,6,1,3};
+		System.out.println(Arrays.toString(nums));
+
+		for(int i=1;i<nums.length;i++) {
+			int cardInsert=nums[i];
+			int cardIndex=i;
+			for(int j=i-1;j>=0;j--) {
+				if(nums[j]>cardInsert) {
+					nums[cardIndex]=nums[j];
+					cardIndex--;
+				}else {
+					break;
+				}
+//				System.out.println(Arrays.toString(nums));
+
+			}
+			nums[cardIndex]=cardInsert;
+
+		}
+		System.out.println(Arrays.toString(nums));
+
+	}
+
+}
